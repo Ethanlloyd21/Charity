@@ -1,0 +1,27 @@
+.navbar {
+    border-radius: 0;
+    font-family: "Raleway";
+    color: "white";
+    margin-bottom: 0 !important;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px
+}
+
+#top {
+    opacity: 0.2;
+}
+
+#top {
+    background: transparent;
+}
+
+#top .fixed-top {
+    background: red!important;
+}

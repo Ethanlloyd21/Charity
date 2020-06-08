@@ -1,7 +1,13 @@
-html {
-    font-family: Raleway !important;
+body {
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-body {
-    font-family: Raleway !important;
+p {
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: 100%;
 }
