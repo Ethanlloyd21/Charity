@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollUpButton from "react-scroll-up-button";
 import './style.css';
 
 
@@ -2706,6 +2707,7 @@ class Policy extends Component {
                     </div>{" "}
 
                 </div>
+                <ScrollUpButton />
             </div>
 
 

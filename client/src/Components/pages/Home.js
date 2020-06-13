@@ -10,6 +10,7 @@ import Girl from '../images/girl.png';
 import Kids2 from '../images/container.png';
 import Community from '../images/community.png';
 import { UserAddOutlined, DollarCircleOutlined, BarChartOutlined } from '@ant-design/icons';
+import ScrollUpButton from "react-scroll-up-button";
 
 
 
@@ -95,7 +96,7 @@ const Home = (props) => {
                     <p id="responsive_h7" style={{ color: "#66615b", padding: "10px 90px 30px 90px" }} data-aos="right" data-aos-delay="100">
                         Members of Donationally will receive numerous perks on their
                         philanthropist journey. Benefits include: information and updates on
-                        "Favorite" charities, free personal / business web page, and so much more.
+                        "Favorite" charities, free service on personal or business website, and so much more.
                         Give back by making Donationally.com a mainstay in your giving
             mission.</p>
                     <div className="page_inner_div">
@@ -111,6 +112,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+            <ScrollUpButton />
 
 
         </div>

@@ -106,13 +106,13 @@ class Footer extends Component {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link>Copyright &copy; 2020 - </Nav.Link>
-                            <Nav.Link>Seattle, WA. 98101 | </Nav.Link>
+                            <Nav.Link>Seattle, WA. &copy; 2020 - </Nav.Link>
+
                             <Nav.Link href="/policy">PRIVACY POLICY</Nav.Link>
                             <Nav.Link onClick={() => this.setModal21Visible(true)}>
                                 DISCLAIMER
                             </Nav.Link>
-                            <Nav.Link onClick={() => this.setModal20Visible(true)}>COPYRIGHT NOTICE </Nav.Link>
+                            <Nav.Link onClick={() => this.setModal20Visible(true)}>COPYRIGHT</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

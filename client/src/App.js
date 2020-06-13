@@ -1,37 +1,36 @@
-import React from 'react';
-import NavbarTop from './Components/layout/NavbarTop';
+import React, { Component } from 'react';
 import Hero from './Components/layout/Hero';
 import Navbar from './Components/layout/Navbar';
 import Policy from './Components/pages/Policy';
 import Contact from './Components/pages/Contact';
 import Footer from './Components/layout/Footer';
-import Login from './Components/pages/Login';
-import Login2 from './Components/Login2';
+import Search from './Components/pages/Search';
+import Saved from './Components/pages/Saved';
 import Home from './Components/pages/Home';
-import Todos from './Components/pages/Todos';
-import Register from './Components/pages/Register';
-import Admin from './Components/pages/Admin';
-import PrivateRoute from './hocs/PrivateRoute';
-import UnPrivateRoute from './hocs/UnPrivateRoute';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <Router>
-      <NavbarTop />
-      <Hero />
-      <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/policy" component={Policy} />
-      <UnPrivateRoute path="/login" component={Login} />
-      <UnPrivateRoute path="/login2" component={Login2} />
-      <UnPrivateRoute path="/register" component={Register} />
-      <PrivateRoute path="/todos" roles={["user", "admin"]} component={Todos} />
-      <PrivateRoute path="/admin" roles={["admin"]} component={Admin} />
-      <Footer />
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+
+
+        <Hero />
+        <Navbar />
+
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/policy" exact={true} component={Policy} />
+        <Route path="/search" exact={true} component={Search} />
+        <Route path="/favorites" exact={true} component={Saved} />
+        <Route path="/contact" exact={true} component={Contact} />
+
+        <Footer />
+
+
+      </Router>
+    );
+  }
 }
 
 export default App;

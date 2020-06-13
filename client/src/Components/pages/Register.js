@@ -89,7 +89,7 @@ const Register = props => {
     const classes = useStyles();
 
     return (
-        <div style={{ marginTop: "50px" }} >
+        <div style={{ marginTop: "50px", marginBottom: "50px" }} >
 
             <Container component="main" maxWidth="xs">
                 <CssBaseline />

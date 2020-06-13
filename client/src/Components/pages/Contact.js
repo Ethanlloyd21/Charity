@@ -3,6 +3,8 @@ import axios from "axios";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Button, Col } from 'react-bootstrap';
+import { Tooltip } from 'antd';
+import ScrollUpButton from "react-scroll-up-button";
 import Icon from '../images/original_trans.png';
 import Lloyd from '../images/lloyd2.png';
 import Owen from '../images/Owen.png';
@@ -67,8 +69,8 @@ class Contact extends Component {
                 <section className="content-section text-white text-center" id="services">
                     <div className="container">
                         <div className="content-section-heading">
-                            <h3 className="text-dark mb-0">Get to know Us..</h3>
-                            <h1 className="mb-5" style={{ color: "white" }}>Creator and Founder of DONATIONALLY ...</h1>
+                            <h3 className="text-dark mb-0">Get to know us..</h3>
+                            <h1 className="mb-5" style={{ color: "white" }}>Creators and Co-Founders of DONATIONALLY</h1>
                         </div>
                         <div className="row">
                             <div className="col-lg-2 col-md-6 mb-5 mb-lg-0">
@@ -79,7 +81,9 @@ class Contact extends Component {
                             </div>
                             <div className="col-lg-2 col-md-6 mb-5 mb-lg-0">
                                 <span className="service-icon rounded-circle mx-auto mb-3">
-                                    <a href="https://lloydmarcelino.com" target="blank_"> <img src={Lloyd} style={{ width: "150px", height: "150px" }} alt="Lloyd Marcelino" id="contact_photo"></img></a>
+                                    <Tooltip title="view Lloyd's Portfolio">
+                                        <a href="https://lloydmarcelino.com" target="blank_"> <img src={Lloyd} style={{ width: "150px", height: "150px" }} alt="Lloyd Marcelino" id="contact_photo"></img></a>
+                                    </Tooltip>
                                 </span>
                                 <h4>
                                     <strong>Lloyd Marcelino</strong>
@@ -89,7 +93,9 @@ class Contact extends Component {
                             </div>
                             <div className="col-lg-2 col-md-6 mb-5 mb-md-0">
                                 <span className="service-icon rounded-circle mx-auto mb-3">
-                                    <a href="https://ohhhhhwhen.github.io/React-Portfolio" target="blank_"><img src={Owen} style={{ width: "150px", height: "150px" }} alt="Owen Chantala" id="contact_photo"></img></a>
+                                    <Tooltip title="view Owen's Portfolio">
+                                        <a href="https://ohhhhhwhen.github.io/React-Portfolio" target="blank_"><img src={Owen} style={{ width: "150px", height: "150px" }} alt="Owen Chantala" id="contact_photo"></img></a>
+                                    </Tooltip>
                                 </span>
                                 <h4>
                                     <strong>Owen Chantala</strong>
@@ -99,7 +105,9 @@ class Contact extends Component {
                             </div>
                             <div className="col-lg-2 col-md-6 mb-5 mb-md-0">
                                 <span className="service-icon rounded-circle mx-auto mb-3">
-                                    <a href="https://ben-react-portfolio-v2.herokuapp.com/" target="blank_"><img src={Ben} style={{ width: "150px", height: "150px" }} alt="Ben Olsen" id="contact_photo"></img></a>
+                                    <Tooltip title="view Ben's Portfolio">
+                                        <a href="https://ben-react-portfolio-v2.herokuapp.com/" target="blank_"><img src={Ben} style={{ width: "150px", height: "150px" }} alt="Ben Olsen" id="contact_photo"></img></a>
+                                    </Tooltip>
                                 </span>
                                 <h4>
                                     <strong>Ben Olson</strong>
@@ -109,7 +117,9 @@ class Contact extends Component {
                             </div>
                             <div className="col-lg-2 col-md-6 mb-5 mb-md-0">
                                 <span className="service-icon rounded-circle mx-auto mb-3">
-                                    <a href="http://serene-headland-14339.herokuapp.com/" target="blank_"><img src={Ari} style={{ width: "150px", height: "150px" }} alt="Ari Horowitz" id="contact_photo"></img></a>
+                                    <Tooltip title="view Ari's Portfolio">
+                                        <a href="http://serene-headland-14339.herokuapp.com/" target="blank_"><img src={Ari} style={{ width: "150px", height: "150px" }} alt="Ari Horowitz" id="contact_photo"></img></a>
+                                    </Tooltip>
                                 </span>
                                 <h4>
                                     <strong>Ari Horowitz</strong>
@@ -121,7 +131,9 @@ class Contact extends Component {
 
                             <div className="col-lg-2 col-md-6">
                                 <span className="service-icon rounded-circle mx-auto mb-3">
-                                    <a href="https://fast-reef-84155.herokuapp.com/" target="blank_"><img src={Jared} style={{ width: "150px", height: "150px" }} alt="Jared Kong" id="contact_photo"></img></a>
+                                    <Tooltip title="view Jared's Portfolio">
+                                        <a href="https://fast-reef-84155.herokuapp.com/" target="blank_"><img src={Jared} style={{ width: "150px", height: "150px" }} alt="Jared Kong" id="contact_photo"></img></a>
+                                    </Tooltip>
                                 </span>
                                 <h4>
                                     <strong>Jared Kong</strong>
@@ -147,7 +159,6 @@ class Contact extends Component {
                             initialValues={{
                                 name: '',
                                 email: '',
-                                title: '',
                                 location: '',
                                 subject: '',
                                 message: ''
@@ -163,9 +174,6 @@ class Contact extends Component {
                                 if (!values.email) {
                                     errors.email = 'Email is required';
                                 }
-                                if (!values.title) {
-                                    errors.title = 'Title is required';
-                                }
                                 if (!values.location) {
                                     errors.location = 'Location is required';
                                 }
@@ -177,7 +185,6 @@ class Contact extends Component {
                             validationSchema={Yup.object().shape({
                                 name: Yup.string().required(),
                                 email: Yup.string().email().required(),
-                                title: Yup.string().required(),
                                 location: Yup.string().required(),
                                 subject: Yup.string().required(),
                                 message: Yup.string().required()
@@ -218,21 +225,8 @@ class Contact extends Component {
                                         <Form.Row>
                                             <Col>
                                                 <Form.Group className="site-form__form-group">
-                                                    <Form.Label htmlFor="input-name" className="site-form__label">Title</Form.Label>
-                                                    <Form.Control placeholder="title/ company" type="text" name="title" onBlur={handleBlur} onChange={handleChange} className={`site-form__input ${errors.title && touched.title ? 'site-form__input-error' : ''}`} id="input-name" value={values.title} />
-                                                    {
-                                                        errors.title && touched.title &&
-                                                        <div className="site-form__error"> {errors.title} </div>
-                                                    }
-                                                </Form.Group>
-
-                                            </Col>
-                                        </Form.Row>
-                                        <Form.Row>
-                                            <Col>
-                                                <Form.Group className="site-form__form-group">
                                                     <Form.Label htmlFor="input-name" className="site-form__label">Location:</Form.Label>
-                                                    <Form.Control placeholder="city" type="text" name="location" onBlur={handleBlur} onChange={handleChange} className={`site-form__input ${errors.location && touched.location ? 'site-form__input-error' : ''}`} id="input-name" value={values.location} />
+                                                    <Form.Control placeholder="location" type="text" name="location" onBlur={handleBlur} onChange={handleChange} className={`site-form__input ${errors.location && touched.location ? 'site-form__input-error' : ''}`} id="input-name" value={values.location} />
                                                     {
                                                         errors.location && touched.location &&
                                                         <div className="site-form__error"> {errors.location} </div>
@@ -282,6 +276,7 @@ class Contact extends Component {
                         />
                     </div>
                 </section>
+                <ScrollUpButton />
 
             </div>
 

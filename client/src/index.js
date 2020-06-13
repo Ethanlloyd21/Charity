@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import AuthProvider from './Context/AuthContext';
+import 'antd/dist/antd.css';
 import './index.css';
 
-ReactDOM.render(<AuthProvider><App /></AuthProvider>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 

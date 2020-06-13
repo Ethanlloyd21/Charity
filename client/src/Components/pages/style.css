@@ -252,3 +252,17 @@ tbody:hover {
         font-size: 4vw;
     }
 }
+
+/* zoom style for top charities */
+
+#grow {
+    transition: all .2s ease-in-out;
+}
+
+#grow:hover {
+    transform: scale(1.1);
+}
+
+.ant-modal-title {
+    font-weight: bold !important;
+}
