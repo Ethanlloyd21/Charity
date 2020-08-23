@@ -21,31 +21,31 @@
 
 This is the main log-in portal of the website. It tells a story about Donationally.
 
-![Portal](github/Portal.png)
+![Portal](github/Portal.PNG)
 
 The About Us page describes our core values and motivation.
 
-![Aboutus](github/Aboutus.png)
+![Aboutus](github/Aboutus.PNG)
 
 The Join Us component let the user to sign up for the News Letter via email.
 
-![News Letter](github/join.png)
+![News Letter](github/join.PNG)
 
 The Charity Search page provides the user with a worldmap, and the ability to find charities by location.
 
-![Charitysearch](github/search.png)
+![Charitysearch](github/search.PNG)
 
 Search by charity name or category name component provides the user information of a specific search.
 
-![Charitysearch](github/search2.png)
+![Charitysearch](github/search2.PNG)
 
 A section of National's top charities are provided for the user.
 
-![Charitysearch](github/search3.png)
+![Charitysearch](github/search3.PNG)
 
 The Contact Us page provides personal information / photos about the creators and founders of Donationally.com. There is also a "Review" section where users can ask questions or give comments.
 
-![Contact](github/contactus.png)
+![Contact](github/contactus.PNG)
 
 # Functionality
 ### Log-in System
